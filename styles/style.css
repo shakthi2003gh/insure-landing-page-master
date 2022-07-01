@@ -37,9 +37,19 @@ h3 {
   font-family: "DM Serif Display", serif;
 }
 
-h1 {
+h1,
+h2 {
   font-size: 2.5rem;
   letter-spacing: 0.15ch;
+}
+
+h2,
+h3 {
+  color: var(--color-heading);
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 p {
@@ -59,7 +69,8 @@ a:focus {
 }
 
 @media (min-width: 680px) {
-  h1 {
+  h1,
+  h2 {
     font-size: 4rem;
     max-width: 550px;
   }
@@ -210,5 +221,22 @@ nav.open {
 
   .hero .content {
     text-align: left;
+  }
+}
+
+/* >Feature */
+.features {
+  text-align: center;
+  padding: 6rem 1.5rem;
+}
+
+@media (min-width: 680px) {
+  .features {
+    text-align: left;
+    padding: 10rem 1.5rem;
+  }
+  .feature-section {
+    display: flex;
+    gap: 1.5rem;
   }
 }
