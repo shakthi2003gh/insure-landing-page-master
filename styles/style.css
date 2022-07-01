@@ -1,0 +1,11 @@
+@import url(/styles/normalize.css);
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 375px;
+}
