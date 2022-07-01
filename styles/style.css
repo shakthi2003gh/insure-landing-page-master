@@ -11,6 +11,10 @@ html {
   min-width: 375px;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* >Color palette */
 :root {
   --color-: hsl(216, 30%, 68%);
@@ -18,7 +22,7 @@ html {
   --color-primary: hsl(273, 4%, 51%);
   --color-secondary: hsl(0, 0%, 98%);
 
-  --bg-secondary: hsl(256, 26%, 20%);
+  --bg: hsl(256, 26%, 20%);
 }
 
 /* >Typography */
@@ -31,4 +35,78 @@ h1,
 h2,
 h3 {
   font-family: "DM Serif Display", serif;
+}
+
+header a {
+  font-size: 1.45rem;
+  text-transform: uppercase;
+  color: white;
+}
+
+@media (min-width: 670px) {
+  header a {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+
+  header a:hover {
+    color: var(--color-heading);
+  }
+}
+
+/* >Header */
+header {
+  position: relative;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+header div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+header nav {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+
+  background: url(/images/bg-pattern-mobile-nav.svg) no-repeat bottom,
+    linear-gradient(to bottom, var(--color-heading), var(--color-heading));
+  background-size: contain;
+}
+
+nav.open {
+  height: calc(100vh - 80px);
+  padding: 3rem 1.5rem;
+}
+
+@media (min-width: 670px) {
+  header {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  header nav,
+  nav.open {
+    position: static;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2rem;
+    height: fit-content;
+    padding: 1.5rem;
+    background: transparent;
+  }
 }
