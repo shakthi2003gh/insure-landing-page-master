@@ -183,6 +183,8 @@
     const menuButton = document.querySelector(".menu-button");
     let isMenuOpen = false;
 
+    console.log(window);
+
     menuButton.addEventListener("click", (e) => {
       if (!isMenuOpen) {
         e.target.src = "/images/icon-hamburger.svg";
@@ -193,6 +195,10 @@
       }
 
       isMenuOpen = !isMenuOpen;
+
+      window.addEventListener("scroll", () => {
+        if (!isMenuOpen && window.innerWidth < 680) window.scrollTo(0, 0);
+      });
     });
   </script>
 </html>
