@@ -40,10 +40,14 @@ h3 {
 header a {
   font-size: 1.45rem;
   text-transform: uppercase;
-  color: white;
+  color: var(--color-secondary);
 }
 
-@media (min-width: 670px) {
+a:focus {
+  outline-width: 1rem;
+}
+
+@media (min-width: 680px) {
   header a {
     font-size: 1rem;
     font-weight: bold;
@@ -52,6 +56,40 @@ header a {
 
   header a:hover {
     color: var(--color-heading);
+  }
+}
+
+/* >Buttons */
+button {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0.5rem 1.6rem;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background: transparent;
+  cursor: pointer;
+}
+
+header button {
+  width: 100%;
+}
+
+.button--primary:hover {
+  color: var(--color-secondary);
+  background: var(--color-heading);
+}
+
+.button--secondary:hover {
+  color: var(--bg);
+  background-color: var(--color-secondary);
+}
+
+@media (min-width: 680px) {
+  .button--primary {
+    width: fit-content;
+    color: var(--color-heading);
+    border-color: var(--color-heading);
   }
 }
 
@@ -89,7 +127,7 @@ nav.open {
   padding: 3rem 1.5rem;
 }
 
-@media (min-width: 670px) {
+@media (min-width: 680px) {
   header {
     display: flex;
     align-items: center;
