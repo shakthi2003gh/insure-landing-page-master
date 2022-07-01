@@ -177,4 +177,22 @@
       </nav>
     </footer>
   </body>
+
+  <script>
+    const menu = document.querySelector("nav");
+    const menuButton = document.querySelector(".menu-button");
+    let isMenuOpen = false;
+
+    menuButton.addEventListener("click", (e) => {
+      if (!isMenuOpen) {
+        e.target.src = "/images/icon-hamburger.svg";
+        menu.classList.remove("open");
+      } else {
+        e.target.src = "/images/icon-close.svg";
+        menu.classList.add("open");
+      }
+
+      isMenuOpen = !isMenuOpen;
+    });
+  </script>
 </html>
