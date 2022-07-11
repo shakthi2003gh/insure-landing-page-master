@@ -389,7 +389,7 @@ footer li:hover:first-child {
 
   footer nav {
     display: flex;
-    gap: 15vw;
+    gap: clamp(100px, 15vw, 260px);
   }
 
   footer li:first-child {
